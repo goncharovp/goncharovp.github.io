@@ -195,13 +195,17 @@ main {
 }
 
 @media (max-width: 768px) {
+  body {
+    justify-content: start;
+  }
+
   h1 {
     font-size: 36px;
     letter-spacing: -0.02em;
   }
 
   #inputField {
-    width: 328px;
+    width: 90vw;
   }
 
   #textInput {
@@ -216,7 +220,7 @@ main {
   .dictionary {
     flex-direction: column;
     align-items: center;
-    width: 328px;
+    width: 90vw;
   }
 
   #rightColumn,
