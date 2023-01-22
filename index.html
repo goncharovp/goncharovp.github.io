@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="./index.js"></script>
+    <title>Транслит</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 id="title">T.R.A.N.S.L.I.T</h1>
+      </div>
+    </header>
+    <main>
+      <div id="inputField">
+        <input id="textInput" placeholder="Начните вводить текст" />
+        <button id="submitButton">Добавить</button>
+      </div>
+      <div class="dictionary">
+        <div id="leftColumn">
+          <div class="russianText">
+            <p class="count"></p>
+            <div class="container">
+              <p class="text">Привет</p>
+              <img
+                src="/icons/Group 1.svg"
+                alt="Delete"
+                class="fakeDeleteIcon"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="rightColumn">
+          <div class="translitText">
+            <p class="count"></p>
+            <div class="container">
+              <p class="textTranslit">Privet</p>
+              <img
+                src="/icons/Group 1.svg"
+                alt="Delete"
+                class="fakeDeleteIcon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="deleteAll">
+        <img src="/icons/Group 1.svg" alt="Delete" class="fakeDeleteIcon" />
+        <p>Очистить все</p>
+      </div>
+    </footer>
+  </body>
+</html>

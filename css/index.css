@@ -1,0 +1,271 @@
+@font-face {
+  font-family: IBMPlexMono;
+  src: url(../fonts/IBMPlexMono-Medium.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: IBMPlexMono, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #4520ab;
+  font-size: 40px;
+  letter-spacing: 0.08em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#inputField {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 14px;
+  height: 56px;
+  margin: 50px 0px;
+}
+
+#textInput {
+  width: 80%;
+  height: 68%;
+  padding: 0px 5px;
+  margin: 0px 5px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+#submitButton {
+  width: 20%;
+  height: 68%;
+  padding: 0px 5px;
+  margin: 0px 5px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+#submitButton:hover {
+  cursor: pointer;
+}
+
+.dictionary {
+  display: flex;
+  width: 500px;
+}
+
+#rightColumn,
+#leftColumn {
+  width: 50%;
+  counter-reset: number;
+}
+
+#rightColumn {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0px 8px 8px 0px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.popup {
+  z-index: 2;
+  position: absolute;
+  bottom: 40px;
+  background: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-wrap;
+}
+
+#rightColumn .popup {
+  position: absolute;
+  left: 10px;
+  bottom: 40px;
+}
+
+.popupText {
+  font-size: 16px;
+  margin: 8px 16px 10px 16px;
+  text-align: center;
+}
+
+.russianText {
+  border-right: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 18px;
+  position: relative;
+}
+
+.count {
+  padding: 0px 10px;
+}
+
+.count::before {
+  counter-increment: number;
+  content: counter(number);
+}
+
+.russianText .deleteIcon,
+.russianText .fakeDeleteIcon {
+  padding-right: 10px;
+  display: none;
+}
+
+.translitText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid black;
+  height: 40px;
+  font-size: 18px;
+}
+
+.translitText .count {
+  display: none;
+}
+
+.translitText .textTranslit {
+  padding-left: 10px;
+}
+
+.translitText img {
+  padding-right: 10px;
+}
+
+.newRow {
+  border-top: 2px solid black;
+}
+
+.fakeDeleteIcon:hover,
+.deleteIcon:hover {
+  cursor: pointer;
+}
+
+.fakeDeleteIcon:active,
+.deleteIcon:active {
+  transform: scale(0.9);
+}
+
+#deleteAll {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #adadad;
+  border-radius: 8px;
+  margin-top: 50px;
+  width: 176px;
+  height: 38px;
+}
+
+#deleteAll:hover {
+  cursor: pointer;
+}
+
+#deleteAll:active {
+  transform: scale(0.9);
+}
+
+#deleteAll p {
+  margin: 0px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    letter-spacing: -0.02em;
+  }
+
+  #inputField {
+    width: 328px;
+  }
+
+  #textInput {
+    font-size: 15px;
+    width: 70%;
+  }
+
+  #submitButton {
+    width: 30%;
+  }
+
+  .dictionary {
+    flex-direction: column;
+    align-items: center;
+    width: 328px;
+  }
+
+  #rightColumn,
+  #leftColumn {
+    width: 100%;
+  }
+
+  #leftColumn {
+    border-bottom: 1px solid black;
+  }
+
+  #rightColumn {
+    border-radius: 0px 0px 8px 8px;
+    border-top: 1px solid black;
+  }
+
+  .russianText,
+  .translitText {
+    border: none;
+  }
+
+  .newRow {
+    border-top: 1px solid black;
+  }
+
+  .russianText .deleteIcon,
+  .russianText .fakeDeleteIcon {
+    display: inline;
+    justify-self: right;
+  }
+
+  .translitText .count {
+    display: inline;
+  }
+
+  .translitText .container p {
+    padding-left: 0px;
+  }
+  #rightColumn .popup {
+    position: absolute;
+    left: 0px;
+    bottom: 40px;
+  }
+
+  #inputField {
+    margin: 15px 0px;
+  }
+
+  #deleteAll {
+    margin-top: 15px;
+  }
+}
